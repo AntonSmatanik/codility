@@ -1,16 +1,15 @@
 function maxProfit(A) {
-    const N = A.length;
+  const N = A.length;
 
-    let maxProfit = 0;
-    let minPrice = Number.MAX_SAFE_INTEGER;
+  let minPrice = Number.MAX_SAFE_INTEGER;
+  let maxProfit = 0;
 
-    for (let i = 0; i < N; i++) {
-        minPrice = Math.min(minPrice, A[i]);
-        maxProfit = Math.max(maxProfit, A[i] - minPrice);
-    }
+  for (let i = 0; i < N; i++) {
+    minPrice = Math.min(minPrice, A[i]);
+    maxProfit = Math.max(maxProfit, A[i] - minPrice);
+  }
 
-    return maxProfit;
-
+  return maxProfit;
 }
 
 console.log(maxProfit([23171, 21011, 21123, 21366, 21013, 21367])); // 356

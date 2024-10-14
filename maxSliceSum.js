@@ -1,18 +1,18 @@
 function maxSliceSum(A) {
-    const N = A.length;
-    let maxSlice = A[0];
-    let acc = 0;
+  const N = A.length;
+  let maxSlice = A[0];
+  let acc = 0;
 
-    for (let i = 0; i < N; i++) {
-        acc += A[i];
-        maxSlice = Math.max(maxSlice, acc);
+  for (let i = 0; i < N; i++) {
+    acc += A[i];
+    maxSlice = Math.max(maxSlice, acc);
 
-        if (acc < 0) {
-            acc = 0;
-        }
+    if (acc < 0) {
+      acc = 0;
     }
+  }
 
-    return maxSlice;
+  return maxSlice;
 }
 
 console.log(maxSliceSum([-2, 1])); // 1
