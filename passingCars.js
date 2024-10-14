@@ -1,16 +1,17 @@
 function passingCars(A) {
-    let count = 0;
-    let east = 0;
+  const N = A.length;
+  let count = 0;
+  let east = 0;
 
-    for (let i = 0; i < A.length; i++) {
-        if (A[i] === 0) {
-            east++;
-        } else {
-            count += east;
-        }
+  for (let i = 0; i < N; i++) {
+    if (A[i] === 0) {
+      east++;
+    } else {
+      count += east;
     }
+  }
 
-    return count > 1000000000 ? -1 : count;
+  return count > 1000000000 ? -1 : count;
 }
 
 console.log(passingCars([0, 1, 0, 1, 1])); // 5
