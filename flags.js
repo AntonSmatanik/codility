@@ -9,32 +9,32 @@ const flags = (A) => {
     }
   }
 
-  const maxPossibleFlags = Math.ceil(Math.sqrt(N));
-  let maxCount = 0;
+  const maxPossible = Math.ceil(Math.sqrt(N));
+  let maxFlagCount = 0;
 
-  //  try to place from 1 to maxPossibleFlags flags
-  for (let i = 1; i <= maxPossibleFlags; i++) {
-    let count = 0;
+  //  try to place from 1 to maxPossible flags
+  for (let i = 1; i <= maxPossible; i++) {
+    let flagCount = 0;
     let lastPosition = -i;
 
-    //  check if we can place i number of flags
+    //  check if we can place i number of flags on peaks
     for (const peak of peaks) {
-      //  check if we can place a flag
+      //  check if we can place a flag on a peak
       if (peak >= lastPosition + i) {
-        count++;
+        flagCount++;
         lastPosition = peak;
       }
 
-      //  already have enough flags
-      if (count === i) {
+      //  already have enough flags placed
+      if (flagCount === i) {
         break;
       }
     }
 
-    maxCount = Math.max(maxCount, count);
+    maxFlagCount = Math.max(maxFlagCount, flagCount);
   }
 
-  return maxCount;
+  return maxFlagCount;
 };
 
 console.log(flags([1, 5, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2])); // 3
