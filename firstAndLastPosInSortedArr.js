@@ -50,10 +50,10 @@ const firstAndLastPosInSortedArr = (arr, target) => {
 
   return [first(0, N - 1), last(0, N - 1)];
 };
-                      
+
 performance.mark("A");
 
-console.log(firstAndLastPosInSortedArr([1,1,1,1,1,1,1,1,1,1], 1)); // [0, 9]
+console.log(firstAndLastPosInSortedArr([1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 1)); // [0, 9]
 console.log(firstAndLastPosInSortedArr([5, 7, 7, 8, 8, 10], 8)); // [3, 4]
 console.log(firstAndLastPosInSortedArr([5, 7, 7, 8, 8, 10], 6)); // [-1, -1]
 console.log(firstAndLastPosInSortedArr([], 0)); // [-1, -1]
