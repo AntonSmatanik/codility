@@ -1,8 +1,5 @@
 function permCheck(A) {
   const N = A.length;
-
-  //   return N === Math.max(...A) ? 1 : 0;
-
   const sorted = A.sort((a, b) => a - b);
 
   for (let i = 0; i < N; i++) {

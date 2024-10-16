@@ -2,7 +2,7 @@ function tapeEquilibrium(A) {
   const N = A.length - 1;
   let leftSum = 0;
   let rightSum = A.reduce((acc, cur) => acc + cur, 0);
-  let minDiff = Infinity;
+  let minDiff = rightSum;
 
   for (let i = 0; i < N; i++) {
     leftSum += A[i];

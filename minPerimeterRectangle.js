@@ -1,14 +1,14 @@
 function minPerimeterRectangle(N) {
-    const M = Math.sqrt(N);
-    let minPerimeter = 2 * (1 + N);
+  const M = Math.sqrt(N);
+  let minPerimeter = 2 * (1 + N);
 
-    for (i=2; i<=M; i++) {
-        if (N % i === 0) {
-            minPerimeter = Math.min(minPerimeter, 2 * (i + N/i));
-        }
+  for (i = 2; i <= M; i++) {
+    if (N % i === 0) {
+      minPerimeter = Math.min(minPerimeter, 2 * (i + N / i));
     }
+  }
 
-    return minPerimeter;
+  return minPerimeter;
 }
 
 console.log(minPerimeterRectangle(30)); // 22

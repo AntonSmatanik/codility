@@ -13,8 +13,9 @@ const maxDoubleSliceSum = (A) => {
 
   let max = 0;
 
+  //  i is delimiting slices and that is the reason we are using i - 1 and i + 1
   for (let i = 1; i < N - 1; i++) {
-    max = Math.max(max, maxFirstSlice[i - 1] + maxSecondSlice[i + 1]);
+    max = Math.max(maxFirstSlice[i - 1] + maxSecondSlice[i + 1], max);
   }
 
   return max;
